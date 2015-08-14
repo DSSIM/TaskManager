@@ -1,0 +1,16 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+ul {
+	list-style: none;
+}
+
+
+
+#todo-container {
+	position: absolute;
+	top:45%;
+	left: 45%;
+}
