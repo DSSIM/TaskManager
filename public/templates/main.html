@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Ajax client</title>
+	<style>
+		* {
+			margin:0;
+			padding:0;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		#todo_main_container {
+			position: absolute;
+			top:20%;
+			left: 20%;
+		}
+	</style>
+</head>
+<body>
+<div>
+    <input type="text" placeholder="Enter your name" id="nameInput">
+    <input type="button" value="OK" id="name_button">
+</div>
+
+<div id="todo_main_container">
+	<div id='add_main_task_field'>
+		<input id='main_input_element'>
+	</div>
+	<div id="main_task_container">
+		<ul id="main_task_list">
+		</ul>
+	</div>
+</div>
+
+</body>
+<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+<script type="text/javascript">
+    (function(){
+		var name_button = document.getElementById('name_button'),
+            nameInput = document.getElementById('nameInput'),
+            mainTaskList = document.getElementById('main_task_list'),
+            main_input_element = document.getElementById('main_input_element');
+
+
+        var userName = 'User1';
+        // if we have cross domain app then "some string" (kind of ws://) should be present
+        // like io.connect('ws://')
+        var socket = io.connect();
+
+        name_button.addEventListener('click', function(){
+            userName = nameInput.value || 'User1';
+        });
+		
+		main_input_element.addEventListener('keydown', addEventHitEnter);
+		
+        function addEventHitEnter(evt){
+            var event = evt || event;
+            // event.keyCode == 13 means 'enter' button
+            if (event.keyCode != 13) {
+                return;
+            } else if (!main_input_element.value){
+				console.log('please, provide some value');
+			} else {
+				
+				var data = {
+					name: userName,
+					title: main_input_element.value
+				};
+
+				main_input_element.value = '';
+				socket.emit('task message', data);
+            };
+        };
+
+        socket.on('task history', function(msg){
+            for (var i in msg){
+                if(msg.hasOwnProperty(i)){
+					var containerTaskLi = document.createElement('li');
+					var tag_a = document.createElement('a');
+					var tag_span_main = document.createElement('span');
+					tag_a.setAttribute('class', 'main_task_check_link');
+					//tag_span_main.innerHTML = task_title;
+					containerTaskLi.appendChild(tag_a);
+					
+					
+					containerTaskLi.innerHTML = containerTaskLi.innerHTML + msg[i].name + ': ' + msg[i].title;
+					
+					containerTaskLi.appendChild(tag_span_main);
+					
+					main_task_list.appendChild(containerTaskLi);
+                };
+            };
+        });
+
+        socket.on('task message', function(msg){
+			var containerTaskLi = document.createElement('li');
+			var tag_a = document.createElement('a');
+			var tag_span_main = document.createElement('span');
+			tag_a.setAttribute('class', 'main_task_check_link');
+			//tag_span_main.innerHTML = task_title;
+			containerTaskLi.appendChild(tag_a);
+			
+
+			containerTaskLi.innerHTML = containerTaskLi.innerHTML + msg.name + ': ' + msg.title;
+			
+			containerTaskLi.appendChild(tag_span_main);
+			main_task_list.appendChild(containerTaskLi);
+
+        });
+
+    })();
+</script>
+
+</html>
