@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<script type="text/javascript" src="scripts/init.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+</head>
+<body onLoad="init()">
+	<ul id="category-list">
+		<div>Категорії задач:<div>
+		<input class="add-category-button" type="button" value="Add category" onClick="openCategoryDialog()">
+	</ul>
+	<div id="category-dialog-back">
+		<div class="category-dialog-front">
+			<h3>Введіть назву списку</h3>
+			<input type="text" id="category-name-input"><br>
+			<input type="button" value="Close" onClick="closeCategoryDialog()">
+			<input type="submit" value="Save" onClick="saveNewCategory()">
+		</div>
+	</div>
+</body>
+</html>
