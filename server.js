@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 var tasks = [];
 
-app.get('/app', function(req, res){
+app.get('/todo', function(req, res){
     res.sendFile(staticDir + 'templates/main.html');
 
 });
