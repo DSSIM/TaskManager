@@ -1,30 +1,33 @@
-var listToDoId="ul1";
-var listDoneId="ul2";
-
-function doneTask(event){
-//task done
-	var taskLi=event.target;
-	while(taskLi != event.currentTarget & taskLi.nodeName != "LI"){
-		taskLi=taskLi.parentElement;
-	}
-	if(taskLi.)
-
-}
-
-function undoneTask(event){
-//task undone
-	if(event.target.parentElement.id == listDoneId) {
-		console.dir(event);	
-	}
-}
-
 document.addEventListener("DOMContentLoaded", function() {
-	//alert("started");
-	document.getElementById(listToDoId).addEventListener("change",doneTask);
-	document.getElementById(listDoneId).addEventListener("change",undoneTask);
+
+	var listToDoId="ul1";
+	var listDoneId="ul2";
+
+	var doneTask = function(event){
+	//task done
+		var target=event.target;
+
+		if(target.dataset.action != "doneTask") return; //check is data-action is "doneTask" 
+
+		var task=event.target.parentElement;
+
+		while(task.nodeName != "LI"){ //searchnig parent LI node
+			task=task.parentElement;
+			if(task == event.currentTarget || task.nodeName == "UL") return;//if parent is current target or UL- there is error! no parent LI node 
+		}
+
+		var newlist;
+
+		if(target.checked) {
+			newlist=listDoneId;
+		} else {
+			newlist=listToDoId;
+		}
+
+		document.getElementById(newlist).appendChild(task);
+	}
+
+	document.body.addEventListener("change",doneTask);
 });
-
-
-//alert("started");
 
 
