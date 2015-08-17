@@ -1,0 +1,239 @@
+
+/*					CSS-RESET					*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+/*					MAIN					*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700,400italic&subset=latin,cyrillic-ext);
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", Arial;
+}
+
+.header{
+	width: 840px;
+	margin: 60px auto 45px;
+	height: 55px;
+}
+
+.center{
+	background: rgb(229, 229, 229) url(images/loginBG.jpg) -200px -200px;
+	box-shadow: 0px 1px 7.6px 0.4px rgba(32, 22, 0, 0.32);
+	height: 320px;
+}
+
+.center-container{
+	margin: 0 auto 80px;
+	width: 840px;
+	height: 320px;
+	background: #fff;
+	padding-top: 25px;
+	box-sizing: border-box;
+}
+
+.register-form{
+	display: inline-block;
+	width: 320px;
+	margin: 0 50px;
+}
+
+.register-form input {
+	font-size: 16px;
+	color: rgb(70, 69, 71);
+	line-height: 1.2;
+	padding-left: 60px;
+	box-sizing: border-box;
+	border: none;
+	width: 320px;
+	height: 50px;
+	background: #f8f8f8 url(images/icons1.png) no-repeat 16px 13px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.register-form input:nth-child(2){
+	background-position: 16px -44px;
+}
+
+.register-form input:nth-child(3){
+	background-position: 16px -105px;
+}
+
+.register-form .submit{
+	background: #a3c644;
+	font-size: 24px;
+	color: rgb(255, 255, 255);
+	padding-left: 0;
+	text-align: center;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.register-form .question{
+	text-align: center;
+	font-size: 14px;
+	color: rgb(70, 69, 71);
+	line-height: 1.2;
+	font-weight: bold;
+}
+
+.register-form a{
+	text-decoration: none;
+	color: #39c2d7;
+}
+
+
+.info{
+	widows: 370px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.info h1{
+	font-size: 20px;
+	color: rgb(70, 69, 71);
+	line-height: 0.9;
+	margin-bottom: 40px;
+}
+
+.info span{
+	color: #39c2d7;
+}
+
+.info p span{
+	color: #a3c644;
+}
+
+.info p {
+	font-size: 16px;
+	color: #bdbcbc;
+	line-height: 1.125;
+	width: 370px;
+}
+
+.bottom{
+	width: 840px;
+	margin: 60px auto;
+	height: 235px;
+	padding: 0;
+
+}
+
+.thumb{
+	display: inline-block;
+	vertical-align: top;
+	width: 196px;
+	height: 250px;
+	margin: 0 40px;
+}
+
+.thumb .img{
+	background: url(images/icons2.png) no-repeat 10px 0;
+	width: 90px;
+	height: 65px;
+	margin: 0 auto 30px;
+}
+
+.thumb:nth-child(2) .img{
+	background-position: 13px -120px;
+}
+
+.thumb:nth-child(3) .img{
+	background-position: 13px -235px;
+}
+
+.thumb h1{
+	font-size: 13px;
+	color: rgb(57, 194, 215);
+	text-transform: uppercase;
+	line-height: 1.286;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.thumb p{
+	font-size: 12px;
+	color: rgb(161, 161, 161);
+	line-height: 1.2;
+}
+
+footer{
+	width: 840px;
+	height: 25px;
+	margin: 0 auto 30px;
+}
+
+footer li{
+	display: inline-block;
+	height: 25px;
+	margin-right: 20px;
+	font-size: 13px;
+	color: #a3c644;
+	line-height: 25px;
+	vertical-align: middle;
+
+}
+
+footer .copyright{
+	color: rgb(161, 161, 161);
+}
+
+
+
+footer li:last-child{
+	float: right;
+}
+
+footer .like{
+	color: rgb(57, 194, 215);
+}
+
+footer .social{
+	display: inline-block;
+	margin-right: 25px;
+	width: 25px;
+	height: 25px;
+	background: url(images/icons3.png) no-repeat;
+}
+
+footer .social:nth-child(3){
+	background-position: 0 -50px;
+}
+
+footer .social:nth-child(4){
+	background-position: 0 -100px;
+}
+
