@@ -12,8 +12,8 @@
 		<div>Категорії задач:<div>
 		<input class="add-category-button" type="button" value="Add category" onClick="openCategoryDialog()">
 	</ul>
-	<div id="category-dialog-back">
-		<div class="category-dialog-front">
+	<div id="category-dialog-back" onClick="closeCategoryDialog()">
+		<div class="category-dialog-front" onClick="event.stopPropagation()">
 			<h3>Введіть назву списку</h3>
 			<input type="text" id="category-name-input"><br>
 			<input type="button" value="Close" onClick="closeCategoryDialog()">
