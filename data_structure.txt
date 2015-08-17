@@ -6,6 +6,7 @@ users = [
                 avatar: ??? (later)
                 categories: [
                     {
+                    
                         title: "category1",                                                         (string)
                         tasks: [
                                     {
@@ -17,10 +18,13 @@ users = [
                                         attached_file: ??? (later)
                                         priority: ENUM field                                        (ENUM)
                                         comments: [
-                                                {
+                                                {           
                                                     author: 'name',                                 (string)
                                                     body: 'some text',                              (string)
                                                     date: 15.15.13                                  (datefield)
+                                                },
+                                                {
+                                                    ...next comment...
                                                 }
                                         ]
                                     },
