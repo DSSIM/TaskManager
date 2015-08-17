@@ -1,9 +1,29 @@
-user = "{
-          name: "user1";
-          categories: {
-            name: "category1";
-            tasks: {
-              name: "task1";
+users = [
+            {
+                email: email@e.mail(primary key),                                                   (string)
+                name: "user1",                                                                      (string)
+                password: '******,                                                                  (string at first)
+                categories: [
+                    {
+                        title: "category1",                                                         (string)
+                        tasks: [
+                                    {
+                                        title: 'some task 1',
+                                        duedate: 15.05.35                                           (date)
+                                        reminder: 15.05.35                                          (date)
+                                    },
+                                    {
+                                        ...next task...
+                                    }
+                        ]
+                    },
+                    {
+                        title: "category2",
+                    },
+                    ...
+                ]
+            },
+            {
+                .....user2....
             }
-          }
-        }
+        ]
