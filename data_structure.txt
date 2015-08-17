@@ -1,9 +1,44 @@
-user = "{
-          name: "user1";
-          categories: {
-            name: "category1";
-            tasks: {
-              name: "task1";
+users = [
+            {
+                email: email@e.mail(primary key),                                                   (string)
+                name: "user1",                                                                      (string)
+                password: '******,                                                                  (string at first)
+                avatar: ??? (later)
+                categories: [
+                    {
+                    
+                        title: "category1",                                                         (string)
+                        tasks: [
+                                    {
+                                        title: 'some task 1',                                       (string)
+                                        duedate: 15.05.35,                                          (datefield)
+                                        reminder: 15.05.35,                                         (datefield)
+                                        subtasks: ['str', 'str', 'str'],                            (array of strings)
+                                        note: 'some note',                                          (string or blob)
+                                        attached_file: ??? (later)
+                                        priority: ENUM field                                        (ENUM)
+                                        comments: [
+                                                {           
+                                                    author: 'name',                                 (string)
+                                                    body: 'some text',                              (string)
+                                                    date: 15.15.13                                  (datefield)
+                                                },
+                                                {
+                                                    ...next comment...
+                                                }
+                                        ]
+                                    },
+                                    {
+                                        ...next task 2...
+                                    }
+                        ]
+                    },
+                    {
+                        ...next category 2...
+                    }
+                ]
+            },
+            {
+                .....user2....
             }
-          }
-        }
+]
