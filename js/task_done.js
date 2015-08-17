@@ -1,7 +1,11 @@
+/**
+begin by Dmytro_Pinchuk@epam.com
+**/
+
 document.addEventListener("DOMContentLoaded", function() {
 
-	var listToDoId="ul1";
-	var listDoneId="ul2";
+	var listToDoId="tasksToDo";
+	var listDoneId="tasksDone";
 
 	var doneTask = function(event){
 	//task done
@@ -31,3 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+/**
+end by Dmytro_Pinchuk@epam.com
+**/

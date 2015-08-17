@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="js/task_done.js"></script>
 </head>
 <body>
 	<header>
@@ -82,39 +83,39 @@
 			<div class="main">
 				<div>
 					<input type="text" name="add_task" class="add_task" placeholder="+ Add a new task">
-					<ul class="incoming">
+					<ul class="incoming" id="tasksToDo">
 						<li>
-							<div id="inbox"><i class="fa fa-square-o"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolore ea, esse quisquam. </div>
+							<div id="inbox"><input type="checkbox" data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolore ea, esse quisquam. </div>
 						</li>
 						<li>
-							<div><i class="fa fa-square-o"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati blanditiis eos similique, nulla, expedita explicabo.</div>
+							<div><input type="checkbox" data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati blanditiis eos similique, nulla, expedita explicabo.</div>
 						</li>
 						<li>
-							<div><i class="fa fa-square-o"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, quod!</div>
+							<div><input type="checkbox" data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, quod!</div>
 						</li>
 						<li>
-							<div><i class="fa fa-square-o"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quis, error numquam praesentium cumque architecto.</div>
+							<div><input type="checkbox" data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quis, error numquam praesentium cumque architecto.</div>
 						</li>
 						<li>
-							<div><i class="fa fa-square-o"></i>Lorem ipsum dolor sit amet, consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, totam.</div>
+							<div><input type="checkbox" data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, totam.</div>
 						</li>
 					</ul><br>
 					<i class="fa fa-eye"></i><input type="text" name="add_task" class="display_task" placeholder="Show completed tasks">
-					<ul class="completed">
+					<ul class="completed" id="tasksDone">
 						<li>
-							<div><i class="fa fa-check-square-o"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolore ea, esse quisquam. </div>
+							<div><input type="checkbox" checked data-action="doneTask"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolore ea, esse quisquam. </div>
 						</li>
 						<li>
-							<div><i class="fa fa-check-square-o"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati blanditiis eos similique, nulla, expedita explicabo.</div>
+							<div><input type="checkbox" checked data-action="doneTask"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati blanditiis eos similique, nulla, expedita explicabo.</div>
 						</li>
 						<li>
-							<div><i class="fa fa-check-square-o"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, quod!</div>
+							<div><input type="checkbox" checked data-action="doneTask"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, quod!</div>
 						</li>
 						<li>
-							<div><i class="fa fa-check-square-o"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quis, error numquam praesentium cumque architecto.</div>
+							<div><input type="checkbox" checked data-action="doneTask"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quis, error numquam praesentium cumque architecto.</div>
 						</li>
 						<li>
-							<div><i class="fa fa-check-square-o"></i>Lorem ipsum dolor sit amet, consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, totam.</div>
+							<div><input type="checkbox" checked data-action="doneTask"></i>Lorem ipsum dolor sit amet, consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, totam.</div>
 						</li>
 					</ul><br>
 				</div>
