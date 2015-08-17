@@ -20,15 +20,13 @@ document.addEventListener("DOMContentLoaded", function() {
 			if(task == event.currentTarget || task.nodeName == "UL") return;//if parent is current target or UL- there is error! no parent LI node 
 		}
 
-		var newlist;
-
 		if(target.checked) {
-			newlist=listDoneId;
+			var listDone=document.getElementById(listDoneId);
+			listDone.insertBefore(task,listDone.firstChild);
 		} else {
-			newlist=listToDoId;
+			document.getElementById(listToDoId).appendChild(task);
 		}
 
-		document.getElementById(newlist).appendChild(task);
 	}
 
 	document.body.addEventListener("change",doneTask);
