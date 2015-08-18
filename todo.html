@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,15 @@
 	<script type="text/javascript" src="js/task_done.js"></script>
 </head>
 <body>
+	<div id="darken">
+		<div class="create_item">
+			  <form action="#">
+			  	<strong>Enter a new category name</strong>
+			  	<input type="text" name="new_category">
+			  	<label for="new_category"></label>
+			  </form>   
+		</div>
+	</div>
 	<header>
 		<div class="container">
 			<div class="left_sidebar">
@@ -19,9 +29,9 @@
 			<div class="workarea">
 				<h1>Inbox - category items</h1>
 				<div class="right_top_sidebar">
-					<i class="fa fa-user-plus"></i>
-					<i class="fa fa-sort-alpha-asc"></i>
-					<i class="fa fa-ellipsis-h"></i>
+					<img src="https://api.fnkr.net/testimg/25x25/00CED1/FFF/">
+					<img src="https://api.fnkr.net/testimg/25x25/00CED1/FFF/">
+					<img src="https://api.fnkr.net/testimg/25x25/00CED1/FFF/">
 				</div>
 			</div>
 		</div>
@@ -30,8 +40,12 @@
 		<div class="left_sidebar">
 			<div class="profile_info">
 				<div class="profile_photo">
-					<a href="#" class="profile_img"><img src="images/nikitka.jpg" alt="profile_img"></a>
-					<a href="#" class="toggle_profile"><img src="images/arrow_up.png" alt=""></a>
+					<a href="#" class="profile_img">
+						<img src="images/nikitka.jpg" alt="profile_img">
+					</a>
+					<a href="#" class="toggle_profile">
+						<img src="images/arrow_up.png" alt="">
+					</a>
 				</div>
 				<div class="user_name">
 					<span>@nikitka</span>
@@ -51,10 +65,10 @@
 			<div class="categories">
 				<ul>
 					<li>
-						<div>Inbox</div>
+						<div id="inbox">Inbox</div>
 					</li>
 					<li class="active_category">
-						<div>Salary</div>
+						<div>Salary<a href="#"></a></div>
 					</li>
 					<li>
 						<div>Wishlist</div>
@@ -76,6 +90,9 @@
 			<div class="add_category">
 				<a href="#">
 					+ add a new category
+				</a>
+				<a href="#">
+					+ create a new folder
 				</a>				
 			</div>
 		</div>
@@ -85,37 +102,107 @@
 					<input type="text" name="add_task" class="add_task" placeholder="+ Add a new task">
 					<ul class="incoming" id="tasksToDo">
 						<li>
-							<div id="inbox"><input type="checkbox" data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolore ea, esse quisquam. </div>
+							<div class="checkbox_style">
+									<label> 
+										<input type="checkbox" data-action="doneTask">
+									</label>
+									<span>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolore ea, esse quisquam.
+									</span>
+							</div>
 						</li>
 						<li>
-							<div><input type="checkbox" data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati blanditiis eos similique, nulla, expedita explicabo.</div>
+							<div class="checkbox_style">
+								<label>
+									<input type="checkbox" data-action="doneTask">
+								</label>
+								<span>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati blanditiis eos similique, nulla, expedita explicabo.
+								</span>
+							</div>
 						</li>
 						<li>
-							<div><input type="checkbox" data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, quod!</div>
+							<div class="checkbox_style">
+								<label>
+									<input type="checkbox" data-action="doneTask">
+								</label>
+								<span>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati blanditiis eos similique, nulla, expedita explicabo.
+								</span>
+							</div>
 						</li>
 						<li>
-							<div><input type="checkbox" data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quis, error numquam praesentium cumque architecto.</div>
+							<div class="checkbox_style">
+								<label>
+									<input type="checkbox" data-action="doneTask">
+								</label>
+								<span>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quis, autem. Quis.
+								</span>
+							</div>
 						</li>
 						<li>
-							<div><input type="checkbox" data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, totam.</div>
+							<div class="checkbox_style">
+								<label>
+									<input type="checkbox" data-action="doneTask">
+								</label>
+								<span>
+									Lorem ipsum dolor sit amet, consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, totam.
+								</span>
+							</div>
 						</li>
 					</ul><br>
-					<i class="fa fa-eye"></i><input type="text" name="add_task" class="display_task" placeholder="Show completed tasks">
+					<a  href="#" class="display_task"><i class="fa fa-eye"></i>Show completed tasks</a>
 					<ul class="completed" id="tasksDone">
 						<li>
-							<div><input type="checkbox" checked data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolore ea, esse quisquam. </div>
+							<div class="checkbox_style">
+								<label>
+									<input type="checkbox" id="checkbox_style6" checked data-action="doneTask">
+								</label>
+								<span>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolore ea, esse quisquam.
+								</span>
+							</div>
 						</li>
 						<li>
-							<div><input type="checkbox" checked data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati blanditiis eos similique, nulla, expedita explicabo.</div>
+							<div class="checkbox_style">
+								<label>
+									<input type="checkbox" checked data-action="doneTask">
+								</label>
+								<span>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati blanditiis eos similique, nulla, expedita explicabo.
+								</span>
+							</div>
 						</li>
 						<li>
-							<div><input type="checkbox" checked data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, quod!</div>
+							<div class="checkbox_style">
+								<label>
+									<input type="checkbox" checked data-action="doneTask">
+								</label>
+								<span>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, quod!
+								</span>
+							</div>
 						</li>
 						<li>
-							<div><input type="checkbox" checked data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quis, error numquam praesentium cumque architecto.</div>
+							<div class="checkbox_style">
+								<label>
+									<input type="checkbox" checked data-action="doneTask">
+								</label>
+								<span>			
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quis, error numquam praesentium cumque architecto.
+								</span>								
+							</div>
 						</li>
 						<li>
-							<div><input type="checkbox" checked data-action="doneTask">Lorem ipsum dolor sit amet, consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, totam.</div>
+							<div class="checkbox_style">
+								<label>
+									<input type="checkbox"  id="checkbox_style10" checked data-action="doneTask">
+								</label>
+								<span>
+									Lorem ipsum dolor sit amet, consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, totam.
+								</span>
+							</div>
 						</li>
 					</ul><br>
 				</div>
