@@ -1,37 +1,38 @@
-
+ 
 /*					CSS-RESET					*/
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,  
+form, fieldset, input, p, blockquote, table, th, td, embed, object { 
+  padding: 0; 
+  margin: 0;  
+  } 
+table { 
+  border-collapse: collapse; 
+  border-spacing: 0; 
+  } 
+fieldset, img, abbr { 
+  border: 0; 
+  } 
+address, caption, cite, code, dfn, em,  
+h1, h2, h3, h4, h5, h6, strong, th, var { 
+  font-weight: normal; 
+  font-style: normal; 
+  } 
+ul { 
+  list-style: none; 
+  } 
+caption, th { 
+  text-align: left; 
+  } 
+h1, h2, h3, h4, h5, h6 { 
+  font-size: 1.0em; 
+  } 
+q:before, q:after { 
+  content: ''; 
+  } 
+a, ins { 
+  text-decoration: none; 
+  } 
 
 /*					MAIN					*/
 
@@ -40,7 +41,7 @@ ol, ul {
 body{
 	margin: 0;
 	padding: 0;
-	font-family: "Roboto", Arial;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 .header{
@@ -64,13 +65,30 @@ body{
 	box-sizing: border-box;
 }
 
-.register-form{
+.form{
 	display: inline-block;
 	width: 320px;
+	height: 280px;
 	margin: 0 50px;
+	overflow: hidden;
 }
 
-.register-form input {
+.form .register-form,
+.form .login-form{
+	height: 280px;
+	margin-bottom: 20px;
+	transition: margin 2s;
+}
+
+.up{
+	margin-top: -300px;
+}
+
+/*.form .login-form{
+	display: none;
+}*/
+
+.form input {
 	font-size: 16px;
 	color: rgb(70, 69, 71);
 	line-height: 1.2;
@@ -84,15 +102,15 @@ body{
 	margin-bottom: 15px;
 }
 
-.register-form input:nth-child(2){
+.form .email{
 	background-position: 16px -44px;
 }
 
-.register-form input:nth-child(3){
+.form .password{
 	background-position: 16px -105px;
 }
 
-.register-form .submit{
+.form .submit{
 	background: #a3c644;
 	font-size: 24px;
 	color: rgb(255, 255, 255);
@@ -102,7 +120,7 @@ body{
 	cursor: pointer;
 }
 
-.register-form .question{
+.form .question{
 	text-align: center;
 	font-size: 14px;
 	color: rgb(70, 69, 71);
@@ -110,7 +128,7 @@ body{
 	font-weight: bold;
 }
 
-.register-form a{
+.form a{
 	text-decoration: none;
 	color: #39c2d7;
 }
@@ -149,7 +167,6 @@ body{
 	margin: 60px auto;
 	height: 235px;
 	padding: 0;
-
 }
 
 .thumb{
@@ -201,20 +218,19 @@ footer li{
 	height: 25px;
 	margin-right: 20px;
 	font-size: 13px;
-	color: #a3c644;
 	line-height: 25px;
 	vertical-align: middle;
-
-}
-
-footer .copyright{
 	color: rgb(161, 161, 161);
 }
 
+footer a{
+	color: #a3c644;
+}
 
 
 footer li:last-child{
 	float: right;
+	color: rgb(57, 194, 215);
 }
 
 footer .like{
@@ -223,17 +239,16 @@ footer .like{
 
 footer .social{
 	display: inline-block;
-	margin-right: 25px;
 	width: 25px;
 	height: 25px;
 	background: url(images/icons3.png) no-repeat;
 }
 
-footer .social:nth-child(3){
+footer .social1{
 	background-position: 0 -50px;
 }
 
-footer .social:nth-child(4){
+footer .social2{
 	background-position: 0 -100px;
 }
 
