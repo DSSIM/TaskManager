@@ -118,9 +118,8 @@ body{
 	border-radius: 3px;
 }
 
-.form:onfocus input{
-	
-}
+.form input:focus:-moz-placeholder {color:transparent;}
+.form input:focus::-webkit-input-placeholder {color:transparent;}
 
 
 .form .email{
