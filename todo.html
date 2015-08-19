@@ -8,14 +8,18 @@
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="js/task_done.js"></script>
+	<script type="text/javascript" src="js/category_manipulation.js"></script>
 </head>
 <body>
 	<div id="darken">
-		<div class="create_item">
+		<div class="create_item" onClick="event.stopPropagation()">
 			  <form action="#">
-			  	<strong>Enter a new category name</strong>
+			  	<strong>Enter a new category name</strong><br/>
 			  	<input type="text" name="new_category">
 			  	<label for="new_category"></label>
+			  	<hr/>
+			  	<input type="button" id="addCategoryClose" value="Close"></button>
+			  	<input type="button" id="addCategorySave" value="Save"></button>
 			  </form>   
 		</div>
 	</div>
@@ -88,7 +92,7 @@
 				</ul>
 			</div>
 			<div class="add_category">
-				<a href="#">
+				<a id="addCategoryWindow" href="#">
 					+ add a new category
 				</a>
 				<a href="#">
