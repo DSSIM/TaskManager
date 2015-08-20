@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	var editCategory = function(category){
 		document.getElementsByClassName("active_category")[0].classList.remove("active_category");
-		category.classList.add("active_category");
+		category.parentElement.classList.add("active_category");
 		category.innerHTML = inputCategory.value+'<a href="#"></a>';
 		closeWindow();
 		event.preventDefault();
