@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		var newCategoryDiv = document.createElement("div");
 		newCategory.appendChild(newCategoryDiv);
 		document.getElementsByClassName("categories")[0].children[0].appendChild(newCategory);
-		editCategory(newCategory);
+		editCategory(newCategory.children[0]);
 
 	}
 
